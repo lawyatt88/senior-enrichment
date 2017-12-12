@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    height: 4rem;
+  }
+
+  header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    width: 100vw;
+    height: 4em;
+    padding: 0 5vw;
+    justify-content: space-between;
+    background-color: #004963;
+    border-bottom: 2px #fff solid;
+   }
+  
+  .logo img {
+    height: 100%;
+    padding: 1.25em;
+  }
+  
+  nav {
+    display: flex;
+    padding: 1.25em 2em;
+  }
+  
+  .nav-item {
+    align-self: center;
+  }
+
+  .update-title {
+    display: inline-block;
+    margin: 20px 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 
+  INSERT INTO students ("firstName", "lastName", "email", "gpa", "createdAt", "updatedAt") VALUES ('Grace', 'Hopper', 'gracehopper@gmail.com', 4.0, now(), now()); 
+  INSERT INTO students ("firstName", "lastName", "email", "gpa", "createdAt", "updatedAt") VALUES ('John', 'Doe', 'johnnyd@gmail.com', 3.3, now(), now()); 
+  
+  INSERT INTO campuses (name, imgUrl, description, createdAt, updatedAt) VALUES ('University of Georgia', 'http://www.uga.edu/assets/img/GEORGIA-V-FC.png', 'Founded in 1785, it is the country's oldest state-chartered university and the birthplace of the American system of public higher education.', now(), now()); 
+  
+  INSERT INTO campuses (name, "imgUrl", description, "createdAt", "updatedAt") VALUES ('Fullstack Academy of Code', 'https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/1163/s300/course-report-fullstack-academy-600-600.png', 'An immersive software engineering coding bootcamp located in New York City and Chicago.', now(), now()); 
+*/
+
