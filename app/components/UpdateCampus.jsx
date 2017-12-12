@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
+import { Link } from 'react-router-dom';
+
 
 import CampusInfoForm from './CampusInfoForm'
 import UpdateEnrolledStudents from './UpdateEnrolledStudents'
@@ -12,7 +14,7 @@ function UpdateCampus (props) {
     const currentCampus = props.campuses.filter(campus => campus.id === campusId)[0]
     console.log(props)
     if (props && !currentCampus) {return <h5>Campus has been deleted!</h5>}
-        return (
+    else {return (
             <div>
                 <h1 className="update-title">UPDATE: <span>{currentCampus && currentCampus.name}</span></h1>
                 <button id="delete" onClick={() => props.handleClick(currentCampus)}>DELETE CAMPUS</button>
@@ -34,7 +36,7 @@ function UpdateCampus (props) {
                     </div>
                 </div>
             </div>
-        )
+        )}
 }
 
 function mapStateToProps (state){
@@ -46,7 +48,6 @@ function mapStateToProps (state){
 function mapDispatchToProps(dispatch){
     return {
         handleClick(currentCampus){
-            console.log(currentCampus)
             const action = deleteCampus(currentCampus.id)
             dispatch(action)
         }

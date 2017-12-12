@@ -28,10 +28,17 @@ router.put('/:campusId', (req, res, next) => {
     .catch(next)
 })
 
-router.delete(':/campusId', (req, res, next) => {
-    Campus.findById(req.params.id)
-    .then(campus => campus.destroy())
+router.delete('/:campusId', (req, res, next) => {
+    console.log('i made it to the server!', req.params.campusId)
+    Campus.findById(req.params.campusId)
+    .then(campus => {
+      const campusName = campus.name
+      campus.destroy()
+      return campusName
+    })
+    .then(campusName => {
+      res.json(campusName)})
     .catch(next)
-})
+  })
 
 module.exports = router

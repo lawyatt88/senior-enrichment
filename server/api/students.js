@@ -58,7 +58,6 @@ router.put('/:studentId', (req, res, next) => {
 })
 
 router.delete('/:studentId', (req, res, next) => {
-  console.log('i made it to the server!', req.params.studentId)
   Student.findById(req.params.studentId)
   .then(student => {
     const studentName = student.name

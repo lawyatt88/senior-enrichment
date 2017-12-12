@@ -42,7 +42,7 @@ export function updateCampus(formData, history){
         .then(res => res.data)
         .then(updatedCampus => {
             dispatch(gotCampus(updatedCampus))
-            history.push(`/students/${updatedCampus.id}`)
+            history.push(`/campuses/${updatedCampus.id}`)
         })
     }
 }

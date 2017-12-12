@@ -29,12 +29,12 @@ export class AppMain extends Component {
                     <Route exact path="/students" component={StudentsList} />
                     <Route exact path="/students/addstudent" component={AddStudent} />
                     <Route exact path="/students/updatestudent/:studentId" component={UpdateStudent} />
-                    <Route path="/students/:studentId" component={SingleStudent} />
+                    <Route exact path="/students/:studentId" component={SingleStudent} />
                     <Route exact path="/campuses" component={CampusesList} />
                     <Route exact path="/campuses/addcampus" component={AddCampus} />
                     <Route exact path="/campuses/updateenrolledstudents" component={UpdateEnrolledStudents} />
                     <Route exact path="/campuses/updatecampus/:campusId" component={UpdateCampus} />
-                    <Route path="/campuses/:campusId" component={SingleCampus} />
+                    <Route exact path="/campuses/:campusId" component={SingleCampus} />
                 </Switch>
             </div>
         )
